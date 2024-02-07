@@ -1,5 +1,2 @@
-class SearchController {
-  
-    
-}
-module.exports = new SearchController;
+class SearchController {}
+module.exports = new SearchController();

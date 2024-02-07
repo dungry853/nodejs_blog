@@ -1,4 +1,2 @@
-class HomeController{
- 
-}
-module.exports = new HomeController;
+class HomeController {}
+module.exports = new HomeController();
