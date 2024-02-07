@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`);
+  console.log(`App listening on port http://localhost:${port}`);
 });
 const db = require('./app/config/db');
 db.connect();

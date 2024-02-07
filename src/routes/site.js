@@ -5,13 +5,13 @@ const NewsController = require('../app/controllers/NewsController');
 const siteController = require('../app/controllers/SiteController');
 
 //search
-router.use('/search', siteController.search);
+router.get('/search', siteController.search);
 
 //news
-router.use('/news/:slug', NewsController.show);
-router.use('/news', siteController.news);
+router.get('/news/:slug', NewsController.show);
+router.get('/news', siteController.news);
 
 //home
-router.use('/', siteController.home);
+router.get('/', siteController.home);
 
 module.exports = router;
