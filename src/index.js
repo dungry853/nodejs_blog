@@ -4,6 +4,7 @@ const port = 3000;
 const path = require('path');
 const route = require('./routes');
 const handlebars = require('express-handlebars');
+
 //template-engine
 app.engine('.hbs', handlebars.engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
@@ -25,3 +26,5 @@ route(app);
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
 });
+const db = require('./app/config/db');
+db.connect();

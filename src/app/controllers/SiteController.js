@@ -1,3 +1,4 @@
+const Course = require('../models/Course');
 class SiteController {
   search(req, res) {
     res.render('news');
@@ -6,7 +7,13 @@ class SiteController {
     res.render('news');
   }
   home(req, res) {
-    res.render('home');
+    Course.find({})
+      .then((courses) => {
+        res.json(courses);
+      })
+      .catch((err) => {
+        res.status(400).json({ error: 'ERROR!!!' });
+      });
   }
 }
 module.exports = new SiteController();
