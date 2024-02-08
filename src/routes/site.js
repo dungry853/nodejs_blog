@@ -12,7 +12,11 @@ router.get('/news/:slug', NewsController.show);
 router.get('/news', siteController.news);
 
 //home & courses
+router.get('/courses/create',coursesController.createGET);
+router.post('/courses/createPOST',coursesController.createPOST);
 router.get('/courses/:slug',coursesController.show);
+//router theo id
+// router.get('/courses/:id',coursesController.show);
 router.get('/', siteController.home);
 
 module.exports = router;
