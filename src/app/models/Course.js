@@ -6,6 +6,8 @@ const Course = new Schema({
   name: { type: String, maxLength: 255 },
   thumbnail: { type: String },
   description: { type: String, maxLength: 600 },
+  slug: {type:String},
+  videoID: {type:String}
 });
 
 module.exports = mongoose.model('Course', Course);
